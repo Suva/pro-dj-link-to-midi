@@ -10,6 +10,7 @@
   },
   "author": "Jaan Pullerits <clysuva@gmail.com>",
   "license": "ISC",
+  "repository": "https://github.com/Suva/pro-dj-link-to-midi",
   "dependencies": {
     "commander": "^4.1.1",
     "easymidi": "^1.0.3",

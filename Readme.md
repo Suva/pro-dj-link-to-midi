@@ -1,4 +1,4 @@
-Pro DJ Link to Midi
+Pro DJ Link to MIDI
 ===================
 
 ## Installation
