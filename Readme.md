@@ -5,7 +5,7 @@ Pro DJ Link to MIDI
 
 ```
 npm install -g pro-dj-link-to-midi
-link2midi -i "Network Interface" -m "Midi Interface"
+djlink2midi -i "Network Interface" -m "Midi Interface"
 ```
 
 ## Options
