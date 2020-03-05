@@ -8,7 +8,8 @@ const timer = new NanoTimer()
 const program = require('commander')
 
 program
-  .version('1.0')
+  .name('djlink2midi')
+  .version('1.0.1')
   .option('-i, --interface <iface>', 'Network interface to use')
   .option('-m, --midi <midi>', 'Midi interface to use')
   .option('-r, --resolution <resolution>', 'Midi clock resolution', parseInt, 24)

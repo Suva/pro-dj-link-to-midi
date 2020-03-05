@@ -1,6 +1,6 @@
 {
   "name": "djlink2midi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert Pro DJ Link tempo info to midi clock.",
   "main": "index.js",
   "scripts": {

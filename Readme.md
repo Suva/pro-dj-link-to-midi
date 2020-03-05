@@ -4,14 +4,14 @@ Pro DJ Link to MIDI
 ## Installation
 
 ```
-npm install -g pro-dj-link-to-midi
+npm install -g djlink2midi
 djlink2midi -i "Network Interface" -m "Midi Interface"
 ```
 
 ## Options
 
 ```
-Usage: link2midi [options]
+Usage: djlink2midi [options]
 
 Options:
   -V, --version                  output the version number
