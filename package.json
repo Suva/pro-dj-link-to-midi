@@ -1,0 +1,19 @@
+{
+  "name": "pro-dj-link-to-midi",
+  "version": "1.0.0",
+  "description": "Convert Pro DJ Link tempo info to midi clock.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "bin": {
+    "link2midi": "index.js"
+  },
+  "author": "Jaan Pullerits <clysuva@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.1.1",
+    "easymidi": "^1.0.3",
+    "nanotimer": "^0.3.15",
+    "pro-dj-link": "^0.1.2"
+  }
+}
