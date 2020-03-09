@@ -9,10 +9,11 @@ const program = require('commander')
 
 program
   .name('djlink2midi')
-  .version('1.0.1')
+  .version('1.0.2')
   .option('-i, --interface <iface>', 'Network interface to use')
   .option('-m, --midi <midi>', 'Midi interface to use')
   .option('-r, --resolution <resolution>', 'Midi clock resolution', parseInt, 24)
+  .option('-c, --correction <resolution>', 'BPM correction in percent', parseFloat, 0)
   .parse(process.argv)
 
 if(!program.interface) {
@@ -49,8 +50,8 @@ function updateTempo(bpm) {
     console.log("Starting timer")
   }
   currentBpm = bpm
-  timer.setInterval(() => clockOutput.send('clock'), '', 60 / bpm / program.resolution + 's')
-  console.log("Setting bpm to: " + bpm)
+  timer.setInterval(() => clockOutput.send('clock'), '', 60 / (bpm + program.correction / 100 * bpm) / program.resolution + 's')
+  console.log("Setting bpm to: " + (program.correction !== 0 ? (bpm + ' + ' + program.correction + '%') : bpm))
 }
 
 vcdj.bpm.subscribe((bpm) => {
@@ -59,3 +60,4 @@ vcdj.bpm.subscribe((bpm) => {
   }
 })
 
+updateTempo(120)

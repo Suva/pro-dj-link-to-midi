@@ -30,7 +30,8 @@ Options:
   -m, --midi <midi>              Midi interface to use
   -r, --resolution <resolution>  Midi clock resolution (default: 24)
   -h, --help                     output usage information
-  
+  -c, --correction <resolution>  BPM correction in percent (default: 0)
+
 Run command without options to get the list of interfaces available.
 ```
 
