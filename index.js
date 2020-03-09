@@ -9,11 +9,11 @@ const program = require('commander')
 
 program
   .name('djlink2midi')
-  .version('1.0.2')
+  .version('1.0.3')
   .option('-i, --interface <iface>', 'Network interface to use')
   .option('-m, --midi <midi>', 'Midi interface to use')
   .option('-r, --resolution <resolution>', 'Midi clock resolution', parseInt, 24)
-  .option('-c, --correction <resolution>', 'BPM correction in percent', parseFloat, 0)
+  .option('-c, --correction <percent>', 'BPM correction in percent', parseFloat, 0)
   .parse(process.argv)
 
 if(!program.interface) {
@@ -59,5 +59,3 @@ vcdj.bpm.subscribe((bpm) => {
     updateTempo(bpm)
   }
 })
-
-updateTempo(120)
